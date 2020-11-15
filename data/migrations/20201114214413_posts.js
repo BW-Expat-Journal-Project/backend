@@ -1,18 +1,19 @@
 exports.up = function (knex) {
-  return knex.schema.createTable("posts", (tbl) => {
-    tbl.increments();
-    tbl
-      .integer("user_id") //foreign key
-      .unsigned() //do not allow interger to be negative
-      .references("id")
-      .inTable("users")
-      .onUpdate("CASCADE")
-      .onDelete("CASCADE");
-    tbl.string("title", 100).notNullable().unique();
-    tbl.string("description", 250).notNullable();
-    tbl.string("photo").notNullable();
-
-    return knex.schema.createTable("users_posts_rela", (tbl) => {
+  return knex.schema
+    .createTable("posts", (tbl) => {
+      tbl.increments();
+      tbl
+        .integer("user_id") //foreign key
+        .unsigned() //do not allow interger to be negative
+        .references("id")
+        .inTable("users")
+        .onUpdate("CASCADE");
+      // .onDelete("CASCADE");
+      tbl.string("title", 100).notNullable().unique();
+      tbl.string("description", 250).notNullable();
+      tbl.string("photo").notNullable();
+    })
+    .createTable("users_posts_rela", (tbl) => {
       tbl
         .integer("user_id")
         .unsigned()
@@ -27,11 +28,10 @@ exports.up = function (knex) {
         .references("id")
         .inTable("posts");
     });
-  });
 };
 
 exports.down = function (knex) {
   return knex.schema
-    .dropTableIfExists("posts")
-    .dropTableIfExists("users_posts_rela");
+    .dropTableIfExists("users_posts_rela")
+    .dropTableIfExists("posts");
 };
