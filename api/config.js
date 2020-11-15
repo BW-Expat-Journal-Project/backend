@@ -1,6 +1,6 @@
 const knex = require("knex");
 
-const knexfile = require("../knexfile");
+const knexfile = require('../knexfile');
 
 //on the Heroku NODE_ENV will be 'production
 

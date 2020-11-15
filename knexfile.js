@@ -2,11 +2,12 @@
 require("dotenv").config(); //access to .env variables
 const pgConnection = process.env.DATABASE_URL;
 module.exports = {
+
   development: {
     client: "sqlite3",
     useNullAsDefault: true,
     connection: {
-      filename: "./data/expal.db3",
+      filename: "./data/expat.db3",
     },
     migrations: {
       directory: "./data/migrations",
@@ -22,6 +23,7 @@ module.exports = {
       },
     },
   },
+
     staging: {
       client: "postgresql",
       connection: {
@@ -49,11 +51,11 @@ module.exports = {
       seeds: {
         directory: "./data/seeds",
       },
-      connection: {
-        database: "my_db",
-        user: "username",
-        password: "password",
-      },
+      // connection: {
+      //   database: "my_db",
+      //   user: "username",
+      //   password: "password",
+      // },
       pool: {
         min: 2,
         max: 10,
