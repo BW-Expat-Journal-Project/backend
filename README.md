@@ -12,7 +12,7 @@ Base URL for deployed API: https://bw-expat-journal-web.herokuapp.com/
 | POST   | /api/auth/login      | login as existing user                                                                    | -              | -              |
 | POST   | /api/                | create a new post                                                                         | X              | -              |
 | GET    | /api/posts           | get information of all posts                                                              | X              | -              |
-| GET    | /api/posts/:id       | get a specific posts by id                                                               | X              | -              |
+| GET    | /api/posts/:id       | get a specific posts by id                                                                | X              | -              |
 | GET    |/api/users/:id/posts  | get posts created by users with specified ID                                              | -              | -              |
 | PUT    | /api/posts/:id       | edit a posts(this is a new feature for DELETE a story or a photo associated with a post ) | X              | X              |
 | DELETE | /api/posts/:id       | delete a posts from database                                                              | X              | X              | 
