@@ -7,8 +7,8 @@ exports.up = function (knex) {
       //   .unsigned() //do not allow interger to be negative
       //   .references("id")
       //   .inTable("users")
-        // .onUpdate("CASCADE")
-        // .onDelete("CASCADE");
+      //   .onUpdate("CASCADE")
+      //   .onDelete("CASCADE");
       tbl.string("title", 100).notNullable().unique();
       tbl.string("description", 250).notNullable();
       tbl.string("photo_url").notNullable();
@@ -28,7 +28,7 @@ exports.up = function (knex) {
         .references("id")
         .inTable("posts");
 
-        tbl.primary(['users_id', 'posts_id']);
+        // tbl.primary(['users_id', 'posts_id']);
     });
     
 };
