@@ -8,6 +8,8 @@ const morgan = require ("morgan");
 const postsRouter = require('../posts/posts-router')
 
 //server
+const authRouter = require('../auth/auth-router')
+
 const server = express();
 
 //middleware
@@ -15,6 +17,7 @@ server.use(cors());
 server.use(express.json()); 
 server.use('/',helmet());
 server.use('/', morgan('--API testing for Expat Journal BuildWeek--'))
+server.use('/api/auth', authRouter)
 
 //routes
 server.use('/api/posts', postsRouter)
