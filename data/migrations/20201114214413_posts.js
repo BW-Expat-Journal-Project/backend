@@ -2,13 +2,13 @@ exports.up = function (knex) {
   return knex.schema
     .createTable("posts", (tbl) => {
       tbl.increments();
-      // tbl
-      //   .integer("user_id") //foreign key
-      //   .unsigned() //do not allow interger to be negative
-      //   .references("id")
-      //   .inTable("users")
-      //   .onUpdate("CASCADE");
-      // .onDelete("CASCADE");
+      tbl
+        .integer("user_id") //foreign key
+        .unsigned() //do not allow interger to be negative
+        .references("id")
+        .inTable("users")
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE");
       tbl.string("title", 100).notNullable().unique();
       tbl.string("description", 250).notNullable();
       tbl.string("photo_url").notNullable();
@@ -18,8 +18,8 @@ exports.up = function (knex) {
         .integer("user_id")
         .unsigned()
         .notNullable()
-        // .references("id")
-        // .inTable("users");
+        .references("id")
+        .inTable("users");
 
       tbl
         .integer("post_id")
