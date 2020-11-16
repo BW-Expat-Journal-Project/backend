@@ -15,7 +15,7 @@ exports.up = function (knex) {
     })
     .createTable("users_posts_rela", (tbl) => {
       tbl
-        .integer("id")
+        .integer("user_id")
         .unsigned()
         .notNullable()
         .references("id")
@@ -27,7 +27,10 @@ exports.up = function (knex) {
         .notNullable()
         .references("id")
         .inTable("posts");
+
+        tbl.primary(['users_id', 'posts_id']);
     });
+    
 };
 
 exports.down = function (knex) {
