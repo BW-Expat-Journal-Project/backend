@@ -7,8 +7,8 @@ exports.up = function (knex) {
         .unsigned() //do not allow interger to be negative
         .references("id")
         .inTable("users")
-        .onUpdate("CASCADE")
-        .onDelete("CASCADE");
+        // .onUpdate("CASCADE")
+        // .onDelete("CASCADE");
       tbl.string("title", 100).notNullable().unique();
       tbl.string("description", 250).notNullable();
       tbl.string("photo_url").notNullable();
