@@ -42,7 +42,7 @@ module.exports = {
 
     production: {
       connection: pgConnection,
-      useNullAsDefault: true,
+      // useNullAsDefault: true,
       // client: 'postgresql',
       client: "pg",
       migrations: {
