@@ -18,8 +18,8 @@ exports.up = function (knex) {
         .integer("user_id")
         .unsigned()
         .notNullable()
-        .references("id")
-        .inTable("users");
+        // .references("id")
+        // .inTable("users");
 
       tbl
         .integer("post_id")
