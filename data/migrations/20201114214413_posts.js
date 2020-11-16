@@ -2,11 +2,11 @@ exports.up = function (knex) {
   return knex.schema
     .createTable("posts", (tbl) => {
       tbl.increments();
-      tbl
-        .integer("user_id") //foreign key
-        .unsigned() //do not allow interger to be negative
-        .references("id")
-        .inTable("users")
+      // tbl
+      //   .integer("user_id") //foreign key
+      //   .unsigned() //do not allow interger to be negative
+      //   .references("id")
+      //   .inTable("users")
         // .onUpdate("CASCADE")
         // .onDelete("CASCADE");
       tbl.string("title", 100).notNullable().unique();
