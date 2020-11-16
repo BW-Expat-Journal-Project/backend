@@ -2,6 +2,7 @@ const router = require("express").Router();
 
 const Users = require("./users-model");
 const restricted = require("../auth/auth-middleware");
+const Posts = require("../posts/posts-model");
 
 
 router.get("/", restricted,  (req, res) => {
