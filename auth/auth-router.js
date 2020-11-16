@@ -22,14 +22,14 @@ router.post('/register', (req, res) => {
 
     Users.add(credentials)
       .then(user => {
-        res.status(201).json({ data: user });
+        res.status(201).json({ message: 'You are successfully registered!', data: user });
       })
       .catch(error => {
         res.status(500).json({ message: error.message });
       });
   } else {
     res.status(400).json({
-      message: "please provide username and password ",
+      message: "please provide all the required information ",
     });
   }
 });
@@ -42,7 +42,7 @@ router.post('/login', (req, res) => {
       .then(([user]) => {
         if (user && bcryptjs.compareSync(password, user.password)) {
           const token = makeToken(user) 
-          res.status(200).json({ message: "Welcome", token })
+          res.status(200).json({ message: "Welcome to Expat Journal!", user, token })
         } else {
           res.status(401).json({ message: "Invalid credentials" });
         }
