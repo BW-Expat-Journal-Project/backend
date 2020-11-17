@@ -22,6 +22,7 @@ API Endpoints for BW Expat Journal Project : https://documenter.getpostman.com/v
 | DELETE | /api/posts/:id       | delete a posts from database                                                              | X              | X              |
 
 ### POST /api/auth/register
+https://bw-expat-journal-web.herokuapp.com/api/auth/register
 
 Request body
 
@@ -48,6 +49,7 @@ Request body
 ```
 
 ### POST /api/auth/login
+https://bw-expat-journal-web.herokuapp.com/api/auth/login
 
 Request Body
 ```
