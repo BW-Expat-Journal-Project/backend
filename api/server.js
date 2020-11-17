@@ -6,6 +6,7 @@ const morgan = require("morgan");
 //router
 const authRouter = require("../auth/auth-router");
 const postRouter = require("../posts/posts-router");
+const userRouter = require("../users/users-router")
 
 //mwauthorization
 const restrictedmw = require("../auth/auth-middleware");
@@ -21,6 +22,7 @@ server.use("/", morgan("--API testing for Expat Journal BuildWeek--"));
 
 //routes
 server.use("/api/auth", authRouter);
+server.use("/api/users", userRouter)
 server.use("/api/posts", restrictedmw, postRouter);
 server.get("/", (req, res) => {
   res.status(200).json({ server: "Expat Journal BuildWeek" });

@@ -12,7 +12,6 @@ module.exports = {
 function find() {
   return db("posts").select(
     "id",
-    "user_id",
     "title",
     "description",
     "photo_url"
@@ -22,7 +21,7 @@ function find() {
 //Find posts by id
 function findById(id) {
     return db("posts")
-    .select("id", "user_id", "title", "description", "photo_url")
+    .select("id","title", "description", "photo_url")
     .where({ id })
     .first();
 }
