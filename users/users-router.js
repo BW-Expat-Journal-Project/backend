@@ -15,8 +15,8 @@ router.get("/", restricted,  (req, res) => {
 
 //GET user's posts
 router.get('/:id/posts', (req, res) => {
-    let id = req.params.id
-  Users.findById({id})
+    let {id}= req.params.id
+  Users.findById(id)
   .then(user =>{
       if(user){
           Posts.findBy({user_id: user.id}).then(posts =>{
