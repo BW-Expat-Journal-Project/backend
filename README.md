@@ -1,8 +1,12 @@
 # Expat Journal BACKEND API
 
-## Documentation
+## Documentation 
 
 Base URL for deployed API: https://bw-expat-journal-web.herokuapp.com/
+
+## LINK FOR DOCUMANTATION AND ENDPOINTS ON POST MAN :
+
+API Endpoints for BW Expat Journal Project : https://documenter.getpostman.com/view/13492253/TVeqc6bz
 
 ## **Endpoints**
 
@@ -19,7 +23,7 @@ Base URL for deployed API: https://bw-expat-journal-web.herokuapp.com/
 
 ### POST /api/auth/register
 
----Request body
+Request body
 
 ```
 {
@@ -29,8 +33,7 @@ Base URL for deployed API: https://bw-expat-journal-web.herokuapp.com/
     "password": "lambdaschool"
 }
 ```
-
---- Return
+ Return
 
 ```
 {
@@ -46,8 +49,7 @@ Base URL for deployed API: https://bw-expat-journal-web.herokuapp.com/
 
 ### POST /api/auth/login
 
----Request Body
-
+Request Body
 ```
 {
     "username": "admin",
@@ -55,8 +57,7 @@ Base URL for deployed API: https://bw-expat-journal-web.herokuapp.com/
 }
 ```
 
----Return
-
+Return
 ```
 {
     "message": "Welcome to Expat Journal!",
