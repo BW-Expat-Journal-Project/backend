@@ -13,6 +13,7 @@ exports.up = function (knex) {
       tbl.string("description", 250).notNullable();
       tbl.string("photo_url").notNullable();
     })
+
     .createTable("users_posts_rela", (tbl) => {
       tbl
         .integer("user_id")
