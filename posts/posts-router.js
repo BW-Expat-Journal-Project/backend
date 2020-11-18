@@ -39,7 +39,6 @@ router.post('/', (req,res)=>{
       res.status(200).json({notification :"New Post is updated", newPost: newPost})
   })
   .catch(err=>{
-    console.log(err)
       res.status(500).json({notification: 'Failed To Add New Post', postSent: newPost, errorMess:err.message})
   })
 })

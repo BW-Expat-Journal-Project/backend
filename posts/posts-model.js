@@ -10,28 +10,23 @@ module.exports = {
 };
 //Find all posts data
 function find() {
-  return db("posts").select(
-    "id",
-    "title",
-    "description",
-    "photo_url"
-  );
+  return db("posts").select("id", "title", "description", "photo_url");
 }
 
 //Find posts by id
 function findById(id) {
-    return db("posts")
-    .select("id","title", "description", "photo_url")
+  return db("posts")
+    .select("id", "title", "description", "photo_url")
     .where({ id })
     .first();
 }
 
 //insert new post into db
 function insert(newPost) {
-    return db("posts")
-    .insert(newPost).returning(["title", "description", "photo_url"]);
+  return db("posts")
+    .insert(newPost)
+    .returning(["id", "title", "description", "photo_url"]);
 }
-
 
 //Find posts by filter
 function findBy(filter) {
