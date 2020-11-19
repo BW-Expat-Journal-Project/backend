@@ -48,7 +48,7 @@ Request body
 }
 ```
 
-`### POST /api/auth/login`
+### `POST /api/auth/login`
 https://bw-expat-journal-web.herokuapp.com/api/auth/login
 
 Request Body
