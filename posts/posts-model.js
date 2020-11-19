@@ -7,6 +7,7 @@ module.exports = {
   insert,
   update,
   remove,
+
 };
 //Find all posts data
 function find() {
@@ -42,3 +43,4 @@ function update(changes, id) {
 function remove(id) {
   return db("posts").where({ id }).del();
 }
+

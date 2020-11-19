@@ -7,4 +7,3 @@ exports.seed = function (knex) {
         ignoreTables: ["knex_migrations", "knex_migrations_lock"], // don't empty migration tables
     });
 }; 
-// 
