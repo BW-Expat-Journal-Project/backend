@@ -21,7 +21,7 @@ API Endpoints for BW Expat Journal Project : https://documenter.getpostman.com/v
 | PUT    | /api/posts/:id       | edit a posts(this is a new feature for DELETE a story or a photo associated with a post ) | X              | X              |
 | DELETE | /api/posts/:id       | delete a posts from database                                                              | X              | X              |
 
-`### POST /api/auth/register`
+### `POST /api/auth/register`
 https://bw-expat-journal-web.herokuapp.com/api/auth/register
 
 Request body
